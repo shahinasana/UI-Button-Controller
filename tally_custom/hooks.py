@@ -25,8 +25,13 @@ app_license = "mit"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/tally_custom/css/tally_custom.css"
+app_include_css = "/assets/tally_custom/css/tally_custom.css"
 # app_include_js = "/assets/tally_custom/js/tally_custom.js"
+app_include_js = [
+    "/assets/tally_custom/js/tally_custom.js"
+]
+
+
 
 # include js, css files in header of web template
 # web_include_css = "/assets/tally_custom/css/tally_custom.css"
@@ -63,7 +68,17 @@ app_license = "mit"
 # role_home_page = {
 # 	"Role": "home_page"
 # }
-
+fixtures = [
+    {
+        "dt": "Custom Field",
+        "filters": [
+            ["name", "in", [
+                "Employee-custom_section_break_jweze", 
+                "Employee-custom_allowed_companies"
+            ]]
+        ]
+    }
+]
 # Generators
 # ----------
 

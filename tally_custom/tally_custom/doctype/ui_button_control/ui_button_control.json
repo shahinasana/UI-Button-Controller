@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-01-28 20:07:14.842604",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "reference_doctype",
+  "button_label",
+  "custom_button_label",
+  "column_break_gkqe",
+  "button_location",
+  "hide_only",
+  "from_menu",
+  "hide_icon"
+ ],
+ "fields": [
+  {
+   "fieldname": "reference_doctype",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Reference Doctype",
+   "options": "DocType",
+   "reqd": 1
+  },
+  {
+   "fieldname": "button_label",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Button Label"
+  },
+  {
+   "fieldname": "custom_button_label",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Custom Button Label"
+  },
+  {
+   "fieldname": "column_break_gkqe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Form",
+   "fieldname": "button_location",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Button Location",
+   "options": "Form\nList\nBoth"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.button_label=='Save' || doc.button_label=='Submit'",
+   "fieldname": "hide_only",
+   "fieldtype": "Check",
+   "label": "Hide Only"
+  },
+  {
+   "default": "1",
+   "depends_on": "eval:doc.button_label=='Print' && doc.button_location=='Form'",
+   "fieldname": "from_menu",
+   "fieldtype": "Check",
+   "label": "Hide From Menu"
+  },
+  {
+   "default": "1",
+   "depends_on": "eval:doc.button_label=='Print' && doc.button_location=='Form'",
+   "fieldname": "hide_icon",
+   "fieldtype": "Check",
+   "label": "Hide Icon"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-02-25 21:58:54.306109",
+ "modified_by": "Administrator",
+ "module": "Tally Custom",
+ "name": "UI Button Control",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

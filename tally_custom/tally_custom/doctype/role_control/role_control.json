@@ -1,0 +1,127 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-01-28 20:02:43.930187",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "role",
+  "user",
+  "hide_awesome_bar",
+  "hide_help_menu",
+  "hide_customize_menu",
+  "column_break_rrpp",
+  "company",
+  "hide_sidebar",
+  "enabled",
+  "section_break_bxez",
+  "hidden_form_buttons",
+  "section_break_uujk",
+  "hidden_desk_menus"
+ ],
+ "fields": [
+  {
+   "fieldname": "role",
+   "fieldtype": "Link",
+   "label": "Role",
+   "max_height": "800px",
+   "options": "Role",
+   "width": "500px"
+  },
+  {
+   "default": "0",
+   "fieldname": "hide_awesome_bar",
+   "fieldtype": "Check",
+   "label": "Hide Awesome Bar"
+  },
+  {
+   "default": "0",
+   "fieldname": "hide_help_menu",
+   "fieldtype": "Check",
+   "label": "Hide Help Menu"
+  },
+  {
+   "default": "0",
+   "fieldname": "hide_customize_menu",
+   "fieldtype": "Check",
+   "label": "Hide Customize Menu"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "label": "User",
+   "options": "User"
+  },
+  {
+   "default": "1",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "column_break_rrpp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_bxez",
+   "fieldtype": "Section Break",
+   "label": "Hidden Form Buttons"
+  },
+  {
+   "fieldname": "hidden_form_buttons",
+   "fieldtype": "Table",
+   "label": "Hidden Form Buttons",
+   "options": "UI Button Control"
+  },
+  {
+   "fieldname": "section_break_uujk",
+   "fieldtype": "Section Break",
+   "label": "Hidden Desk Menus"
+  },
+  {
+   "fieldname": "hidden_desk_menus",
+   "fieldtype": "Table",
+   "label": "Hidden Desk Menus",
+   "options": "UI Desk Menu Control"
+  },
+  {
+   "default": "0",
+   "fieldname": "hide_sidebar",
+   "fieldtype": "Check",
+   "label": "Hide Sidebar"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-02-26 09:09:07.488402",
+ "modified_by": "Administrator",
+ "module": "Tally Custom",
+ "name": "Role Control",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
