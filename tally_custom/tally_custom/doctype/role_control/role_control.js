@@ -9,16 +9,7 @@ frappe.ui.form.on('Role Control', {
                 $(this).attr('data-original-title').toLowerCase() === labelLower;
         });
 
-            $target.addClass('navbar').hide();  // Add the class to hide the button and use hide()
-    
-        // If the button is found, apply the hide class
-        // if ($target.length) {
-        //     console.log(`Hiding button with label "${labelLower}".`);
-        //     $target.addClass('hide-but-active');  // Add the class to hide the button
-        // } else {
-        //     console.log(`Button with label "${labelLower}" not found.`);
-        // }
-        // // Run for all existing rows on load
+        $target.addClass('navbar').hide();  // Add the class to hide the button and use hide()
         frm.doc.hidden_form_buttons?.forEach(row => {
             set_button_options(frm, row.doctype, row.name);
         });

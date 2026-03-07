@@ -108,3 +108,98 @@ def get_doctype_buttons(doctype):
 
     return sorted(set(buttons))
 
+import frappe
+
+@frappe.whitelist()
+def get_user_allowed_companies():
+
+    user = frappe.session.user
+
+    if user == "Administrator":
+        return []
+
+    allowed = frappe.get_all(
+        "Custom Allowed Companies",
+        filters={"parent": user},
+        fields=["company"]
+    )
+
+    return [d.company for d in allowed]
+
+import frappe
+
+@frappe.whitelist()
+def get_user_allowed_companies():
+    user = frappe.session.user
+
+    if user == "Administrator":
+        return []
+
+    rows = frappe.get_all(
+        "Custom Allowed Companies",
+        filters={"parent": user},
+        fields=["company"]
+    )
+
+    return [d.company for d in rows]
+
+
+import frappe
+
+@frappe.whitelist()
+def get_user_allowed_companies():
+    user = frappe.session.user
+
+    if user == "Administrator":
+        return []
+
+    rows = frappe.get_all(
+        "Allowed Companies",
+        filters={"parent": user},
+        fields=["company", "default"]
+    )
+
+    return rows
+
+# import frappe
+# from frappe import _
+
+# def validate_company_access(doc, method=None):
+#     frappe.msgprint(_("Validating company access for document: {0}").format(doc.name))  # Debug log
+
+#     # If document has no company field → ignore
+#     if not hasattr(doc, "company"):
+#         return
+
+#     if not doc.company:
+#         return
+
+#     user = frappe.session.user
+
+#     # Skip Administrator
+#     if user == "Administrator":
+#         return
+
+#     # Get allowed companies from User child table
+#     allowed_companies = frappe.get_all(
+#         "Custom Allowed Companies",  # <-- your child doctype name
+#         filters={"parent": user},
+#         fields=["company"]
+#     )
+
+#     allowed_companies = [d.company for d in allowed_companies]
+
+#     # If no companies configured → block
+#     if not allowed_companies:
+#         frappe.throw(
+#             _("No allowed companies configured for this user"),
+#             frappe.PermissionError
+#         )
+
+#     # If current document company not allowed → block
+#     if doc.company not in allowed_companies:
+#         frappe.throw(
+#             _("You are not allowed to access company: {0}").format(doc.company),
+#             frappe.PermissionError
+#         )
+

@@ -135,6 +135,7 @@ fixtures = [
 # permission_query_conditions = {
 # 	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
 # }
+
 #
 # has_permission = {
 # 	"Event": "frappe.desk.doctype.event.event.has_permission",
@@ -158,6 +159,20 @@ fixtures = [
 # 		"on_cancel": "method",
 # 		"on_trash": "method"
 # 	}
+# }
+doc_events = {
+    "User": {
+        "on_update": "tally_custom.custom.user.sync_user_company_permissions"
+    }
+}
+
+# doc_events = {
+#     "*": {
+#         "validate": "tally_custom.tally_custom.api.role_control.validate_company_access",
+#         "before_insert": "tally_custom.tally_custom.api.role_control.validate_company_access",
+#         "before_save": "tally_custom.tally_custom.api.role_control.validate_company_access",
+#         "on_submit": "tally_custom.tally_custom.api.role_control.validate_company_access",
+#     }
 # }
 
 # Scheduled Tasks
