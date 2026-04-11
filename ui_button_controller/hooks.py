@@ -1,7 +1,7 @@
-app_name = "tally_custom"
-app_title = "Tally Custom"
+app_name = "ui_button_controller"
+app_title = "UI Button Controller"
 app_publisher = "shahina"
-app_description = "Erp with tally customization"
+app_description = "Control button visibility based on Role, Company, and User"
 app_email = "shahinak1992@gmail.com"
 app_license = "mit"
 
@@ -25,10 +25,10 @@ app_license = "mit"
 # ------------------
 
 # include js, css files in header of desk.html
-app_include_css = "/assets/tally_custom/css/tally_custom.css"
+app_include_css = "/assets/ui_button_controller/css/tally_custom.css"
 # app_include_js = "/assets/tally_custom/js/tally_custom.js"
 app_include_js = [
-    "/assets/tally_custom/js/tally_custom.js"
+    "/assets/ui_button_controller/js/tally_custom.js"
 ]
 
 
@@ -162,7 +162,7 @@ fixtures = [
 # }
 doc_events = {
     "User": {
-        "on_update": "tally_custom.custom.user.sync_user_company_permissions"
+        "on_update": "ui_button_controller.custom.user.sync_user_company_permissions"
     }
 }
 

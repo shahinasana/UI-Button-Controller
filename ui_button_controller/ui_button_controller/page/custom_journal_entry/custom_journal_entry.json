@@ -1,0 +1,18 @@
+{
+ "content": null,
+ "creation": "2026-03-14 10:42:53.979086",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2026-03-14 10:48:51.308587",
+ "modified_by": "Administrator",
+ "module": "ERPNext Accountant Edition",
+ "name": "custom-journal-entry",
+ "owner": "Administrator",
+ "page_name": "custom-journal-entry",
+ "roles": [],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0
+}
