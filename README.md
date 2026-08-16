@@ -14,6 +14,7 @@ A flexible and configurable solution to control button visibility in ERPNext bas
 # Installation
 
 bench get-app https://github.com/shahinasana/UI-Button-Controller.git
+
 bench --site your-site-name install-app ui_button_control
 
 # Configuration
