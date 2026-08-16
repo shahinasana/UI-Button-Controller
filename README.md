@@ -36,3 +36,7 @@ bench --site your-site-name install-app ui_button_control
 - ERPNext
 - Python
 - JavaScript
+
+
+🎥 Demo
+[Watch the demo on YouTube](https://youtu.be/LWL6jM8MhFg)
